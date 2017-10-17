@@ -33,5 +33,7 @@
   }
 </script>
 <style scoped>
- 
+ .tableContentBox{
+    display:none;
+ }
 </style>

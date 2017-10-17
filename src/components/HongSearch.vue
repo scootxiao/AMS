@@ -1,15 +1,6 @@
 <template>
-  <div class="content-box clearfix">
-    <div class="leftSection">
-      <FiltrateView></FiltrateView>
-      <div class="leftSectionMiddle">
-        <div class="table-list-content">
-          <router-view/>
-        </div>
-      </div>
-      <PaginationView></PaginationView>
-    </div>
-    <RtModuleView></RtModuleView>
+  <div class="content-box">
+    <router-view/>
   </div>
 </template>
 
@@ -18,8 +9,11 @@
   import PaginationView from './common/Pagination'
   import RtModuleView from './common/RtModule'
 
+  import ListMode from './mode/ListMode'
+  import TableMode from './mode/TableMode'
+
   export default {
-    name: 'monitor',
+    name: 'analyze',
     data () {
       return {
 
@@ -31,11 +25,50 @@
     components:{
       FiltrateView,
       PaginationView,
-      RtModuleView
+      RtModuleView,
+      ListMode,
+      TableMode
     },
   }
 </script>
 
 <style scoped>
- 
+  .router-link-active{
+    background: #00172d;
+  }
+
+  .tabBoxWarper {
+    margin-top:20px;
+    margin-bottom:5px;
+    height:33px;
+    border-bottom: solid 1px #005ac8;
+  }
+
+  .tabBox .tab{
+    margin-left: 0px;   
+  }
+
+  .tabBox .tab a{
+    padding: 6px 30px;
+      background-color: #a7b7c4;
+      border-radius: 0;
+      color: #fff;
+      font-size: 14px;
+  }
+
+  .tabBox .tab a:hover{
+    background-color: #a7b7c4;
+  }
+
+  .tabBox .tab.active a{
+    border-bottom: solid 1px #005ac8;
+    background-color: #005ac8;
+    border-radius:0;
+  }
+
+  .tabBox>li.active>a, 
+  .tabBox>li.active>a:focus, 
+  .tabBox>li.active>a:hover{
+    background-color: #005ac8 !important;
+  }
 </style>

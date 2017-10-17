@@ -6,20 +6,15 @@
             <div class="panel panel-default module">
                 <div class="panel-heading module-hd clearfloat">
                     <div class="box-hd-left clearfix">
-    
                         <span class="hd-left-name oneLineOverflow">微信热点</span>
                     </div>
                     <div class="box-hd-center clearfloat">
-                                      <a href="javascript:;" onclick="jumpToMonitor(4, '63')">微信
-                                        
-                                        <span class="number" style="" id="site_unread_num_63">999+</span>
-                                        
-                                    </a>
-                                    <a href="javascript:;" onclick="jumpToMonitor(4, '64')">5555555555
-                                        
-                                        <span class="number" style="display: none;" id="site_unread_num_64">0</span>
-                                        
-                                    </a>
+                      <a href="javascript:;" onclick="jumpToMonitor(4, '63')">微信
+                        <span class="number" style="" id="site_unread_num_63">999+</span>
+                      </a>
+                      <a href="javascript:;" onclick="jumpToMonitor(4, '64')">5555555555
+                        <span class="number" style="display: none;" id="site_unread_num_64">0</span>  
+                      </a>
                       </div>
                     <div class="box-hd-right">
                         <div class="btn-group btn-group-sm">
