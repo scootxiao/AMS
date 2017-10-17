@@ -15,7 +15,7 @@
           <ul class="nav navbar-nav navItems">
             <li class="navItem"><router-link to="/mainPage">首页</router-link></li>
             <li class="navItem"><router-link to="/monitor">舆情监测</router-link></li>
-            <li class="navItem"><router-link to="/hsindex">搜索</router-link></li>
+            <li class="navItem"><router-link to="/hongsearch">搜索</router-link></li>
             <li class="navItem"><router-link to="/recommend">人工推荐</router-link></li>
             <li class="navItem"><router-link to="/analyze">专题分析</router-link></li>
           </ul>

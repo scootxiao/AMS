@@ -4,7 +4,8 @@
       <FiltrateView></FiltrateView>
       <div class="leftSectionMiddle">
         <div class="table-list-content">
-          <router-view/>
+          <ListMode></ListMode>
+          <TableMode></TableMode>
         </div>
       </div>
       <PaginationView></PaginationView>
@@ -17,6 +18,9 @@
   import FiltrateView from './common/Filtrate'
   import PaginationView from './common/Pagination'
   import RtModuleView from './common/RtModule'
+
+  import ListMode from './mode/ListMode'
+  import TableMode from './mode/TableMode'
 
   export default {
     name: 'monitor',
@@ -31,7 +35,9 @@
     components:{
       FiltrateView,
       PaginationView,
-      RtModuleView
+      RtModuleView,
+      ListMode,
+      TableMode
     },
   }
 </script>
