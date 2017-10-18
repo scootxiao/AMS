@@ -16,6 +16,8 @@ import Analyze_list from '@/components/analyze/SubjectList'
 import Analyze_Visual from '@/components/analyze/Visualization'
 import Analyze_report from '@/components/analyze/Report'
 
+import SetUp from '@/components/SetUp'
+
 Vue.use(Router)
 
 export default new Router({
@@ -54,6 +56,17 @@ export default new Router({
 		    { path:"analyzeReport",component:Analyze_report },
 		    { path: '*',redirect: '/Analyze_list'}
 		  ]
+    },
+    { path: '/setup',
+      name: 'SetUp',
+      component: SetUp,
+/*      children:[ 
+        { path:"/",component:Analyze_list },
+        { path:"analyzeList",component:Analyze_list },
+        { path:"analyzeVisual",component:Analyze_Visual },
+        { path:"analyzeReport",component:Analyze_report },
+        { path: '*',redirect: '/Analyze_list'}
+      ]*/
     },
     {	path: '/',redirect: '/mainPage' },
     {	path: '*',redirect: '/mainPage' }

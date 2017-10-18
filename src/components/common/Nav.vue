@@ -22,6 +22,26 @@
         </div>
       </div>
     </nav>
+    <div class="setUp">
+      <img class="userPic" src="../../assets/img/default_user.gif"/>
+      <div class="welcome">
+        欢迎你：</br>
+        张三
+      </div>
+      <div class="btn-group setUp-dropdown open">
+        <button type="button" class="btn btn-link dropdown-toggle open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">角色：用户</a></li>
+          <li><a href="#">所属组织：上海网信办</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#"><router-link to="/setup">设置</router-link></a></li>
+          <li><a href="#">退出</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -44,6 +64,7 @@
   #navWarp{
     margin-bottom:20px;
     padding:0 50px;
+    padding-right:150px;
     background-color: #002f5b;
     -webkit-box-shadow: -10px 0 10px transparent, 
           10px 0 10px transparent, 
@@ -57,6 +78,7 @@
           10px 0 10px transparent, 
           0 -10px 10px transparent, 
           0px 5px 10px #7d8fb1;
+    position:relative;
   }
 
   #navWarp .navbar{
@@ -125,4 +147,38 @@
     font-size: 14px;
     color: #fff;
   } 
+
+  .setUp{
+    position:absolute;
+    right:50px;
+    top:0;
+    padding-left:48px;
+    min-width:100px;
+    height:50px;
+    background-color:#0a2742;
+  }
+  .setUp .userPic{
+    margin-top:9px;
+    margin-left:-42px;
+    width:32px;
+    height:32px;
+    border-radius:8px;
+    float:left;
+  }
+
+  .setUp .welcome{
+    padding:7px 5px;
+    line-height:18px;
+    max-height:50px;
+    font-size:12px;
+    color:#fff;
+    float:left;
+  }
+
+  .setUp .dropdown-menu{
+    top:50px;
+    right: 0;
+    left: auto;
+  }
+
 </style>
