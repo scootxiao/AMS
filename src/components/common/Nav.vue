@@ -28,7 +28,7 @@
         欢迎你：</br>
         张三
       </div>
-      <div class="btn-group setUp-dropdown open">
+      <div class="btn-group setUp-dropdown">
         <button type="button" class="btn btn-link dropdown-toggle open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="caret"></span>
           <span class="sr-only">Toggle Dropdown</span>

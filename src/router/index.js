@@ -17,6 +17,10 @@ import Analyze_Visual from '@/components/analyze/Visualization'
 import Analyze_report from '@/components/analyze/Report'
 
 import SetUp from '@/components/SetUp'
+import PersonalSettings from '@/components/setup/personal_settings'
+import ChangePassword from '@/components/setup/change_password'
+import InformationCollection from '@/components/setup/information_collection'
+import WarningSet from '@/components/setup/warning_Set'
 
 Vue.use(Router)
 
@@ -60,16 +64,17 @@ export default new Router({
     { path: '/setup',
       name: 'SetUp',
       component: SetUp,
-/*      children:[ 
-        { path:"/",component:Analyze_list },
-        { path:"analyzeList",component:Analyze_list },
-        { path:"analyzeVisual",component:Analyze_Visual },
-        { path:"analyzeReport",component:Analyze_report },
-        { path: '*',redirect: '/Analyze_list'}
-      ]*/
+      children:[ 
+        { path:"/",component:PersonalSettings },
+        { path:"personalsettings",component:PersonalSettings },
+        { path:"changepassword",component:ChangePassword },
+        { path:"informationcollection",component:InformationCollection },
+        { path:"warningset",component:WarningSet },
+        { path: '*',redirect: '/personalsettings'}
+      ]
     },
-    {	path: '/',redirect: '/mainPage' },
-    {	path: '*',redirect: '/mainPage' }
+/*    {	path: '/',redirect: '/mainPage' },
+    {	path: '*',redirect: '/mainPage' }*/
   ]
 })
 
