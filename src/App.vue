@@ -9,6 +9,8 @@
 </template>
 
 <script>
+	import {mapGetters, matpActions} from 'vuex'
+
 	import HeaderView from './components/common/Head.vue'
 	import NavView from './components/common/Nav.vue'
 	import FootView from './components/common/Foot.vue'
@@ -16,14 +18,26 @@
 	import ToolbarView from './components/common/Toolbar.vue'
 
 	export default {
-	  name: 'app',
-	  components:{
-		HeaderView,
-		NavView,
-		FootView,
-		OrganizationView,
-		ToolbarView
-	  },
+		name: 'app',
+		components:{
+			HeaderView,
+			NavView,
+			FootView,
+			OrganizationView,
+			ToolbarView
+		},
+		computed:mapGetters([
+			'headerShow',
+		]),
+		watch:{
+			$route(to,from){
+				if(to.path=='/mainPage'){
+					this.$store.dispatch('hideHeader');
+				}else{
+					this.$store.dispatch('showHeader');
+				}
+			}
+		},
 	}
 </script>
 
