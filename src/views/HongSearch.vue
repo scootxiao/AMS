@@ -1,29 +1,16 @@
 <template>
   <div class="content-box">
-    <div class="tabBoxWarper">
-      <ul class="nav nav-pills tabBox">
-        <li class="tab">
-          <router-link to="/analyze/analyzeList">专题列表</router-link>
-        </li>
-        <li class="tab">
-          <router-link to="/analyze/analyzeVisual">可视化分析</router-link>
-        </li>
-        <li class="tab">
-          <router-link to="/analyze/analyzeReport">舆情报告</router-link>
-        </li>
-      </ul>
-    </div>
     <router-view/>
   </div>
 </template>
 
 <script>
-  import FiltrateView from './common/Filtrate'
-  import PaginationView from './common/Pagination'
-  import RtModuleView from './common/RtModule'
+  import FiltrateView from '../components/common/Filtrate'
+  import PaginationView from '../components/common/Pagination'
+  import RtModuleView from '../components/common/RtModule'
 
-  import ListMode from './mode/ListMode'
-  import TableMode from './mode/TableMode'
+  import ListMode from '../components/mode/ListMode'
+  import TableMode from '../components/mode/TableMode'
 
   export default {
     name: 'analyze',

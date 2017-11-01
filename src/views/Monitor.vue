@@ -15,12 +15,12 @@
 </template>
 
 <script>
-  import FiltrateView from './common/Filtrate'
-  import PaginationView from './common/Pagination'
-  import RtModuleView from './common/RtModule'
+  import FiltrateView from '../components/common/Filtrate'
+  import PaginationView from '../components/common/Pagination'
+  import RtModuleView from '../components/common/RtModule'
 
-  import ListMode from './mode/ListMode'
-  import TableMode from './mode/TableMode'
+  import ListMode from '../components/mode/ListMode'
+  import TableMode from '../components/mode/TableMode'
 
   export default {
     name: 'monitor',
